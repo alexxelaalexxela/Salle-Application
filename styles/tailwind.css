@@ -237,6 +237,25 @@ header .menus.open-menus {
     }
 }
 
+/* Add Swiper Custom Styles Below */
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 @media screen and (max-width: 767px) {
     .our-team .swiper-slide img {
         @apply !h-[300px];

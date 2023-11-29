@@ -1,5 +1,5 @@
 import Testimonial from "../components/Testimonial";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import CounterComponent from "../components/CounterComponent";
 import Link from "next/link";
 import { useSelector } from "react-redux";
@@ -10,7 +10,14 @@ import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Faq from "../components/Faq";
 import Head from "next/head";
+import OfficeSwiper from "../components/OfficeSwiper";
+import ProjectSlider from "../components/ProjectSlider";
+import ClientSlider from "../components/ClientSlider";
+import Slider from "../components/home/Slider";
+import Calendar from "../components/calendar/calendar";
 const Index = (props: any) => {
+        // const [activeTab, setActiveTab] = useState<string>("cozy-room");
+        const [isOpen, setIsOpen] = useState<any>(false);
   const [activeTab, setActiveTab] = useState<string>("all");
   const isRtl =
     useSelector((state: IRootState) => state.themeConfig.direction) === "rtl"
@@ -26,6 +33,27 @@ const Index = (props: any) => {
           "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
       },
     ];
+
+    // Gallery
+    const [photoIndex, setPhotoIndex] = useState<any>(0);
+    useEffect(() => {
+      window["global"] = window as never;
+    }, []);
+    const getItems = () => {
+      let imgs: any = items || [];
+      if (activeTab.toLowerCase() === "all") {
+        imgs = imgs.map((d: any) => d.src);
+        return imgs;
+      }
+      imgs =
+        imgs.filter(
+          (d: any) => d.type.toLowerCase() === activeTab.toLowerCase()
+        ) || [];
+      if (imgs.length > 0) {
+        imgs = imgs.map((d: any) => d.src);
+      }
+      return imgs;
+    };
   return (
     <div>
       <div className="overflow-hidden bg-[url(/assets/images/restaurent/restaurent-bg.png)] bg-contain bg-center bg-repeat-y">
@@ -479,7 +507,7 @@ const Index = (props: any) => {
             alt=""
             className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
           />
-          <Faq type="restaurent" />
+          {/* <Faq type="restaurent" /> */}
         </section>
 
         <section className="py-20 md:py-28">
@@ -601,7 +629,7 @@ const Index = (props: any) => {
             </div>
           </div>
         </section>
-
+        {/*  */}
         <section className="py-[60px] px-5 dark:bg-gray-dark">
           <Testimonial
             className="mx-auto max-w-[1440px] rounded-[32px] py-14 dark:bg-black md:py-20"
@@ -609,7 +637,392 @@ const Index = (props: any) => {
             type="modern-saas"
           ></Testimonial>
         </section>
-
+        {/* Galleries */}
+        <section className="bg-gradient-to-t from-white/60 py-12 dark:bg-gradient-to-t dark:from-white/10 lg:py-24">
+          <div className="container">
+            <div className="heading mb-[30px] text-center ltr:md:text-left rtl:md:text-right">
+              <h6>Some images of our hotel</h6>
+              <h4>Our Gallery</h4>
+            </div>
+            <ul className="filters realestate-filter mt-7 flex flex-row gap-5 overflow-auto whitespace-nowrap pb-2.5 pl-1 sm:gap-[30px]">
+              <li
+                className={`filter ${
+                  activeTab === "cozy-room" ? "active" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                  onClick={() => setActiveTab("cozy-room")}
+                >
+                  Cozy Room
+                </button>
+              </li>
+              <li
+                className={`filter ${
+                  activeTab === "delux-room" ? "active" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                  onClick={() => setActiveTab("delux-room")}
+                >
+                  Delux Room
+                </button>
+              </li>
+              <li
+                className={`filter ${
+                  activeTab === "modern-room" ? "active" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                  onClick={() => setActiveTab("modern-room")}
+                >
+                  Modern Room
+                </button>
+              </li>
+              <li
+                className={`filter ${
+                  activeTab === "family-suit" ? "active" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                  onClick={() => setActiveTab("family-suit")}
+                >
+                  Family Suit
+                </button>
+              </li>
+            </ul>
+            <div
+              className="projects mt-8 grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" || activeTab === "delux-room"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room1.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room1.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" || activeTab === "delux-room"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room2.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room2.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" ? "block" : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room3.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room3.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" || activeTab === "family-suit"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room4.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room4.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" || activeTab === "family-suit"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room5.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room5.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className={`project group relative overflow-hidden rounded-xl ${
+                  activeTab === "cozy-room" || activeTab === "modern-room"
+                    ? "block"
+                    : "hidden"
+                }`}
+              >
+                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                <img
+                  src="/assets/images/hotel-resort/room6.jpg"
+                  className="z-[1] h-full w-full object-cover"
+                  alt=""
+                />
+                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                  <Link
+                    href="#"
+                    scroll={false}
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setPhotoIndex(
+                        getItems().findIndex((d: string) =>
+                          d.toLowerCase().includes("room6.jpg")
+                        )
+                      );
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                        stroke="white"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          {isOpen && (
+            <Lightbox
+              mainSrc={getItems()[photoIndex]}
+              nextSrc={getItems()[(photoIndex + 1) % getItems().length]}
+              prevSrc={
+                getItems()[
+                  (photoIndex + getItems().length - 1) % getItems().length
+                ]
+              }
+              enableZoom
+              onImageLoad={() => {
+                window.dispatchEvent(new Event("resize"));
+              }}
+              onCloseRequest={() => setIsOpen(false)}
+              onMovePrevRequest={() =>
+                setPhotoIndex(
+                  (photoIndex + getItems().length - 1) % getItems().length
+                )
+              }
+              onMoveNextRequest={() =>
+                setPhotoIndex((photoIndex + 1) % getItems().length)
+              }
+            />
+          )}
+        </section>
+        {/* Contact */}
         <section className="py-14 lg:py-[100px]">
           <div className="container">
             <div className="relative z-10 lg:flex">
@@ -803,6 +1216,11 @@ const Index = (props: any) => {
             </div>
           </div>
         </section>
+        {/* calendar */}
+        <div>
+          <h1 className="font-mulish text-2xl">Room Reservation System</h1>
+          <Calendar />
+        </div>
       </div>
     </div>
   );
