@@ -28,44 +28,34 @@ const Index = (props: any) => {
     ];
   return (
     <div>
-      <div className="overflow-hidden bg-[url(/assets/images/restaurent/restaurent-bg.png)] bg-contain bg-center bg-repeat-y">
+      <div className="overflow-hidden bg-[url(/assets/images/restaurent/anniversary.jpeg)] bg-contain bg-center bg-repeat-y">
         <Head>
           <title>
             Restaurent | Plurk – Tailwind CSS Multipurpose Landing Templates
           </title>
         </Head>
-        <div className="relative bg-[url(/assets/images/restaurent/restaurent-banner.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
+        <div className="relative bg-[url(/assets/images/restaurent/salle.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
           <span className="absolute inset-0 bg-black/80"></span>
-          <img
-            src="/assets/images/restaurent/banner-dish-1.png"
-            alt=""
-            className="absolute top-24 hidden w-40 ltr:left-0 rtl:right-0 rtl:rotate-y-180 md:block xl:w-80"
-          />
-          <img
-            src="/assets/images/restaurent/banner-dish-2.png"
-            alt=""
-            className="absolute bottom-0 hidden w-40 ltr:right-0 rtl:left-0 rtl:rotate-y-180 md:block xl:w-80"
-          />
+          
           <div className="relative mx-auto max-w-[572px] text-center text-white">
             <h2 className="text-4xl font-black uppercase md:text-6xl md:leading-[75px]">
               <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                Healthy food
+                Réservez votre salle
               </span>
-              <span>for busy people</span>
+              
             </h2>
             <p className="mx-auto py-6 text-xl font-semibold xl:w-3/4">
-              Imagine devouring delicious, healthy meals daily without so much
-              as lifting a pot.
+              Choissisez votre type de salle et réservez la en ligne en fonction des disponibilités
             </p>
             <Link href="#" className="btn text-white">
-              How It Works
+              réservez maintenant
             </Link>
           </div>
         </div>
 
         <section className="relative bg-white pt-20 pb-14 dark:bg-gray-dark md:py-24">
           <img
-            src="/assets/images/restaurent/waiter.png"
+            src="/assets/images/restaurent/travailleur.png"
             alt=""
             className="absolute -top-[220px] z-[1] w-48 ltr:left-[20%] rtl:right-[20%]"
             data-aos="fade-up"
@@ -116,11 +106,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Choose your meals
+                  Choose your type 
                 </h2>
                 <p className="line-clamp-3">
-                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                  Cras dapibus.
+                  Select between the different type of room availaible
                 </p>
               </div>
               <div className="group space-y-5">
@@ -146,11 +135,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Make it your own
+                  Select a slot
                 </h2>
                 <p className="line-clamp-3">
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
-                  eu, consequat vitae.
+                  Check the availability of the room and select your favorite slot
                 </p>
               </div>
               <div className="group space-y-5">
@@ -176,129 +164,210 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Fresh and affordable
+                  Book it online 
                 </h2>
                 <p className="line-clamp-3">
-                  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                  augue.
+                  Book the room online with your informations
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="heading text-center">
-              <h6>Plans</h6>
-              <h4 className="mb-4 uppercase">
-                Chef meal <span className="text-secondary">plans</span>
-              </h4>
-              <p className="mx-auto text-lg font-medium lg:w-1/2">
-                Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-              </p>
-            </div>
-            <div className="grid gap-x-4 gap-y-8 text-center font-semibold sm:grid-cols-2 lg:grid-cols-3">
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  12 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-1.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
+        <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
+                <div className="container">
+                    <div className="heading text-center">
+                        
+                        <h4>Different Type of Room </h4>
+                    </div>
+                    <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+                        <div className="flex flex-col group rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="mb-8">
+                                <h3 className="text-[22px] font-black text-black dark:text-white">Working Space</h3>
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boissons</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Espace de travail adapté</p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        L'heure
+                                    </div>
+                                    <Link href="#" className="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44">
+                                        50,00CHF
+                                        <small className="text-xs lowercase">/heure</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div className="flex flex-col group rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="relative mb-8">
+                                <h3 className="text-[22px] font-black text-black dark:text-white">Buisness meeting</h3>
+                                
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boissons </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Amuse-bouches</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Meeting space organisation </p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        L'heure
+                                    </div>
+                                    <Link
+                                        href="#"
+                                        className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
+                                    >
+                                        70,00CHF
+                                        <small className="text-xs lowercase">/heure</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div className="flex flex-col group rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="mb-8">
+                                <h3 className="text-[22px] font-black text-black group-hover:text-white dark:text-white">Fêtes/anniversaires</h3>
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Repas</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boisson</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Organisation de la salle </p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        La soirée 
+                                    </div>
+                                    <Link href="#" className="btn bg-black text-xl text-white group-hover:bg-white group-hover:text-black xl:w-44">
+                                        350CHF
+                                        <small className="text-xs lowercase">/soirée</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 99.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Lean & Clean Dinner
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link href="#" className="btn !mt-6 rounded-md text-white">
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  7 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-2.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 79.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Balanced Living
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link
-                    href="#"
-                    className="btn !mt-6 rounded-md bg-secondary text-white hover:bg-primary"
-                  >
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  4 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-3.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 49.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Classic Dinner
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link
-                    href="#"
-                    className="btn !mt-6 rounded-md bg-gray text-white"
-                  >
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            </section>
 
         <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
           <img

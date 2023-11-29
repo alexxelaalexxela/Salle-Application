@@ -40,7 +40,7 @@ const Restaurent = () => {
                     />
                     <div className="relative mx-auto max-w-[572px] text-center text-white">
                         <h2 className="text-4xl font-black uppercase md:text-6xl md:leading-[75px]">
-                            <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Healthy food</span>
+                            <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Réservez votre salle</span>
                             <span>for busy people</span>
                         </h2>
                         <p className="mx-auto py-6 text-xl font-semibold xl:w-3/4">
