@@ -1,0 +1,14 @@
+# Next.js
+.next/
+out/
+
+# Cache and log files from Webpack
+*.log
+*.hot-update.js
+*.hot-update.json
+
+# Other generated files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
