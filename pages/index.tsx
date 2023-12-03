@@ -56,44 +56,34 @@ const Index = (props: any) => {
     };
   return (
     <div>
-      <div className="overflow-hidden bg-[url(/assets/images/restaurent/restaurent-bg.png)] bg-contain bg-center bg-repeat-y">
+      <div className="overflow-hidden bg-[url(/assets/images/restaurent/anniversary.jpeg)] bg-contain bg-center bg-repeat-y">
         <Head>
           <title>
             Restaurent | Plurk – Tailwind CSS Multipurpose Landing Templates
           </title>
         </Head>
-        <div className="relative bg-[url(/assets/images/restaurent/restaurent-banner.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
+        <div className="relative bg-[url(/assets/images/restaurent/salle.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
           <span className="absolute inset-0 bg-black/80"></span>
-          <img
-            src="/assets/images/restaurent/banner-dish-1.png"
-            alt=""
-            className="absolute top-24 hidden w-40 ltr:left-0 rtl:right-0 rtl:rotate-y-180 md:block xl:w-80"
-          />
-          <img
-            src="/assets/images/restaurent/banner-dish-2.png"
-            alt=""
-            className="absolute bottom-0 hidden w-40 ltr:right-0 rtl:left-0 rtl:rotate-y-180 md:block xl:w-80"
-          />
+          
           <div className="relative mx-auto max-w-[572px] text-center text-white">
             <h2 className="text-4xl font-black uppercase md:text-6xl md:leading-[75px]">
               <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                Healthy food
+                Réservez votre salle
               </span>
-              <span>for busy people</span>
+              
             </h2>
             <p className="mx-auto py-6 text-xl font-semibold xl:w-3/4">
-              Imagine devouring delicious, healthy meals daily without so much
-              as lifting a pot.
+              Choissisez votre type de salle et réservez la en ligne en fonction des disponibilités
             </p>
             <Link href="#" className="btn text-white">
-              How It Works
+              réservez maintenant
             </Link>
           </div>
         </div>
 
         <section className="relative bg-white pt-20 pb-14 dark:bg-gray-dark md:py-24">
           <img
-            src="/assets/images/restaurent/waiter.png"
+            src="/assets/images/restaurent/travailleur.png"
             alt=""
             className="absolute -top-[220px] z-[1] w-48 ltr:left-[20%] rtl:right-[20%]"
             data-aos="fade-up"
@@ -144,11 +134,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Choose your meals
+                  Choose your type 
                 </h2>
                 <p className="line-clamp-3">
-                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                  Cras dapibus.
+                  Select between the different type of room availaible
                 </p>
               </div>
               <div className="group space-y-5">
@@ -174,11 +163,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Make it your own
+                  Select a slot
                 </h2>
                 <p className="line-clamp-3">
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
-                  eu, consequat vitae.
+                  Check the availability of the room and select your favorite slot
                 </p>
               </div>
               <div className="group space-y-5">
@@ -204,432 +192,211 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Fresh and affordable
+                  Book it online 
                 </h2>
                 <p className="line-clamp-3">
-                  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                  augue.
+                  Book the room online with your informations
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="heading text-center">
-              <h6>Plans</h6>
-              <h4 className="mb-4 uppercase">
-                Chef meal <span className="text-secondary">plans</span>
-              </h4>
-              <p className="mx-auto text-lg font-medium lg:w-1/2">
-                Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-              </p>
-            </div>
-            <div className="grid gap-x-4 gap-y-8 text-center font-semibold sm:grid-cols-2 lg:grid-cols-3">
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  12 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-1.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
+        <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
+                <div className="container">
+                    <div className="heading text-center">
+                        
+                        <h4>Different Type of Room </h4>
+                    </div>
+                    <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+                        <div className="flex flex-col group rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="mb-8">
+                                <h3 className="text-[22px] font-black text-black dark:text-white">Working Space</h3>
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boissons</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Espace de travail adapté</p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        L'heure
+                                    </div>
+                                    <Link href="#" className="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44">
+                                        50,00CHF
+                                        <small className="text-xs lowercase">/heure</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div className="flex flex-col group rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="relative mb-8">
+                                <h3 className="text-[22px] font-black text-black dark:text-white">Buisness meeting</h3>
+                                
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boissons </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Amuse-bouches</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Meeting space organisation </p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        L'heure
+                                    </div>
+                                    <Link
+                                        href="#"
+                                        className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
+                                    >
+                                        70,00CHF
+                                        <small className="text-xs lowercase">/heure</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div className="flex flex-col group rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div className="mb-8">
+                                <h3 className="text-[22px] font-black text-black group-hover:text-white dark:text-white">Fêtes/anniversaires</h3>
+                            </div>
+                            <ul className="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Repas</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Boisson</p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                            <path
+                                                d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                stroke="white"
+                                                strokeWidth="1.6"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <p className="ltr:pl-3 rtl:pr-3">Organisation de la salle </p>
+                                </li>
+                                
+                            </ul>
+                            <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                        La soirée 
+                                    </div>
+                                    <Link href="#" className="btn bg-black text-xl text-white group-hover:bg-white group-hover:text-black xl:w-44">
+                                        350CHF
+                                        <small className="text-xs lowercase">/soirée</small>
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 99.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Lean & Clean Dinner
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link href="#" className="btn !mt-6 rounded-md text-white">
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  7 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-2.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 79.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Balanced Living
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link
-                    href="#"
-                    className="btn !mt-6 rounded-md bg-secondary text-white hover:bg-primary"
-                  >
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-              <div className="relative rounded-xl bg-white transition duration-500 hover:shadow-[0_0_60px_rgba(0,0,0,0.15)] dark:bg-gray-dark">
-                <span className="absolute top-4 bg-primary py-1 px-2 text-sm text-white ltr:right-4 rtl:left-4">
-                  4 meals
-                </span>
-                <div className="h-48 overflow-hidden rounded-t-xl">
-                  <img
-                    src="/assets/images/restaurent/plan-3.png"
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="space-y-3 p-5">
-                  <div className="flex items-center justify-center gap-3">
-                    <h2 className="text-2xl font-extrabold text-secondary">
-                      $ 49.00 USD
-                    </h2>
-                    <span>per week</span>
-                  </div>
-                  <h2 className="text-2xl font-extrabold text-black line-clamp-1 dark:text-white">
-                    Classic Dinner
-                  </h2>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link
-                    href="#"
-                    className="btn !mt-6 rounded-md bg-gray text-white"
-                  >
-                    CHOOSE PLAN
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
-        <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 block h-9 w-full rotate-180 object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 hidden h-9 w-full object-cover object-top dark:block"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
-          />
-          <div className="overflow-hidden">
-            <div className="container">
-              <div className="grid items-center gap-x-8 gap-y-12 lg:grid-cols-2">
-                <div className="relative mx-auto max-w-[470px] lg:mx-0">
-                  <div className="absolute top-5 -left-10">
-                    <svg
-                      width="214"
-                      height="248"
-                      viewBox="0 0 214 248"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M139.515 246.256C72.6275 255.436 10.3316 228.201 0.91836 161.493C-8.49491 94.7842 56.6327 10.863 123.367 1.30043C190.102 -8.26215 200.969 37.1027 210.459 104.576C219.949 172.05 206.327 237.075 139.515 246.256Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-24 -left-10">
-                    <svg
-                      width="84"
-                      height="84"
-                      viewBox="0 0 84 84"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M81.3928 51.4777C73.6633 73.7393 55.2959 88.8865 33.0255 81.2364C10.7551 73.5863 -5.08673 40.0026 2.4898 17.6644C10.0663 -4.67382 25.9847 -0.848788 48.4847 6.95428C70.9847 14.7573 89.1224 29.216 81.3928 51.4777Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-6 -right-10">
-                    <svg
-                      width="350"
-                      height="304"
-                      viewBox="0 0 350 304"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M349.388 116.01C355.74 211.329 311.122 296.704 215.918 303.36C120.714 310.015 8.44388 209.799 1.47959 114.48C-5.48469 19.2364 59.7959 8.52629 156.148 1.79423C252.577 -4.93783 343.036 20.6899 349.388 116.01Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    className="h-[350px] lg:h-auto"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <img
-                      src="/assets/images/restaurent/lifestyle-plan.png"
-                      alt=""
-                      className="relative z-[1] h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-5">
-                  <div className="heading mb-0">
-                    <h4 className="uppercase">
-                      Meal plans made for your{" "}
-                      <span className="text-primary">lifestyle</span>
-                    </h4>
-                  </div>
-                  <p className="text-lg font-medium">
-                    Aenean vulputate eleifend tellus. Aenean leo ligula,
-                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-                    lorem ante, dapibus in, viverra quis.
-                  </p>
-                  <ul className="space-y-5 text-lg font-bold">
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Choose your meals</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>We cook & deliver</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Heat & eat</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Enjoy & Repeat</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="relative overflow-hidden rounded-xl bg-black bg-[url(/assets/images/restaurent/app-bg.png)] bg-cover bg-no-repeat py-10 px-4 text-center dark:bg-white/5 md:p-16 md:ltr:text-left md:rtl:text-right">
-              <img
-                src="/assets/images/restaurent/food-1.png"
-                alt=""
-                className="absolute bottom-0 w-48 opacity-30 ltr:right-0 rtl:left-0 rtl:rotate-y-180 md:opacity-100 lg:w-[420px]"
-              />
-              <div className="heading relative z-[1] mb-0 lg:w-1/2">
-                <h6>Hello Melur!</h6>
-                <h4 className="!text-white">
-                  Melur's First & Best Food Delivery App is here
-                </h4>
-                <Link
-                  href="#"
-                  className="btn mt-6 rounded-md bg-secondary text-white hover:bg-primary"
-                >
-                  get started
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 block h-9 w-full rotate-180 object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 hidden h-9 w-full object-cover object-top dark:block"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
-          />
-          {/* <Faq type="restaurent" /> */}
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="heading space-y-4 text-center">
-              <h4 className="uppercase">
-                Our <span className="text-primary">articles</span>
-              </h4>
-              <p className="text-lg font-medium">
-                Check out our latest blog posts
-              </p>
-            </div>
-            <div
-              className="group grid-cols-2 overflow-hidden rounded-xl bg-white dark:bg-gray-dark sm:grid"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src="/assets/images/restaurent/food-2.png"
-                  alt=""
-                  className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                />
-              </div>
-              <div className="space-y-4 p-5 font-semibold lg:py-20 lg:px-16">
-                <h6>November 28, 2022</h6>
-                <Link
-                  href="#"
-                  className="text-2xl font-extrabold text-black transition hover:text-secondary dark:text-white dark:hover:text-secondary"
-                >
-                  5 great places to have an authentic italian pizza in LA
-                </Link>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing lectus a
-                  nunc mauris scelerisque sed egestas pharetraol quis pharetra
-                  arcu pharetra blandit scelerisque sed egestas.
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-3.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    We are now introducing pizza delivery via our app
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-4.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    A guide to preparing the five most iconic pizzas of all time
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-5.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    Who first invented the pizza? The true story behind
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/*  */}
         <section className="py-[60px] px-5 dark:bg-gray-dark">
           <Testimonial
             className="mx-auto max-w-[1440px] rounded-[32px] py-14 dark:bg-black md:py-20"
@@ -637,397 +404,12 @@ const Index = (props: any) => {
             type="modern-saas"
           ></Testimonial>
         </section>
-        {/* Galleries */}
-        <section className="bg-gradient-to-t from-white/60 py-12 dark:bg-gradient-to-t dark:from-white/10 lg:py-24">
-          <div className="container">
-            <div className="heading mb-[30px] text-center ltr:md:text-left rtl:md:text-right">
-              <h6>Some images of our hotel</h6>
-              <h4>Our Gallery</h4>
-            </div>
-            <ul className="filters realestate-filter mt-7 flex flex-row gap-5 overflow-auto whitespace-nowrap pb-2.5 pl-1 sm:gap-[30px]">
-              <li
-                className={`filter ${
-                  activeTab === "cozy-room" ? "active" : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
-                  onClick={() => setActiveTab("cozy-room")}
-                >
-                  Cozy Room
-                </button>
-              </li>
-              <li
-                className={`filter ${
-                  activeTab === "delux-room" ? "active" : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
-                  onClick={() => setActiveTab("delux-room")}
-                >
-                  Delux Room
-                </button>
-              </li>
-              <li
-                className={`filter ${
-                  activeTab === "modern-room" ? "active" : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
-                  onClick={() => setActiveTab("modern-room")}
-                >
-                  Modern Room
-                </button>
-              </li>
-              <li
-                className={`filter ${
-                  activeTab === "family-suit" ? "active" : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
-                  onClick={() => setActiveTab("family-suit")}
-                >
-                  Family Suit
-                </button>
-              </li>
-            </ul>
-            <div
-              className="projects mt-8 grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" || activeTab === "delux-room"
-                    ? "block"
-                    : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room1.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room1.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" || activeTab === "delux-room"
-                    ? "block"
-                    : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room2.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room2.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" ? "block" : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room3.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room3.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" || activeTab === "family-suit"
-                    ? "block"
-                    : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room4.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room4.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" || activeTab === "family-suit"
-                    ? "block"
-                    : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room5.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room5.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              <div
-                className={`project group relative overflow-hidden rounded-xl ${
-                  activeTab === "cozy-room" || activeTab === "modern-room"
-                    ? "block"
-                    : "hidden"
-                }`}
-              >
-                <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
-                <img
-                  src="/assets/images/hotel-resort/room6.jpg"
-                  className="z-[1] h-full w-full object-cover"
-                  alt=""
-                />
-                <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
-                  <Link
-                    href="#"
-                    scroll={false}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 duration-200 hover:bg-primary group-hover:opacity-100"
-                    onClick={() => {
-                      setIsOpen(true);
-                      setPhotoIndex(
-                        getItems().findIndex((d: string) =>
-                          d.toLowerCase().includes("room6.jpg")
-                        )
-                      );
-                    }}
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 4.45962C9.91153 4.16968 10.9104 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C3.75612 8.07914 4.32973 7.43025 5 6.82137"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          {isOpen && (
-            <Lightbox
-              mainSrc={getItems()[photoIndex]}
-              nextSrc={getItems()[(photoIndex + 1) % getItems().length]}
-              prevSrc={
-                getItems()[
-                  (photoIndex + getItems().length - 1) % getItems().length
-                ]
-              }
-              enableZoom
-              onImageLoad={() => {
-                window.dispatchEvent(new Event("resize"));
-              }}
-              onCloseRequest={() => setIsOpen(false)}
-              onMovePrevRequest={() =>
-                setPhotoIndex(
-                  (photoIndex + getItems().length - 1) % getItems().length
-                )
-              }
-              onMoveNextRequest={() =>
-                setPhotoIndex((photoIndex + 1) % getItems().length)
-              }
-            />
-          )}
-        </section>
-        {/* Contact */}
+
         <section className="py-14 lg:py-[100px]">
           <div className="container">
             <div className="relative z-10 lg:flex">
               <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
-                <h6>Get In Touch.</h6>
+                <h6>Contactez nous !</h6>
                 <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
                 <div data-aos="fade-right" data-aos-duration="1000">
                   <img
@@ -1049,7 +431,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Full Name
+                      Nom/Prenom
                     </label>
                     <svg
                       width="20"
@@ -1079,7 +461,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Email Address
+                      Adresse mail
                     </label>
                     <svg
                       width="22"
@@ -1111,7 +493,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Mobile Number
+                      Numero de téléphone
                     </label>
                     <svg
                       width="22"
@@ -1129,37 +511,7 @@ const Index = (props: any) => {
                       />
                     </svg>
                   </div>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="city"
-                      className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-                    />
-                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      City
-                    </label>
-                    <svg
-                      width="20"
-                      height="22"
-                      viewBox="0 0 20 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
-                    >
-                      <path
-                        d="M5.89416 2.31259C7.20149 1.48625 8.75475 1.00732 10.4211 1.00732C15.0719 1.00732 18.8421 4.73828 18.8421 9.34066C18.8421 15.0541 12.1053 21.0073 10.4211 21.0073C8.73684 21.0073 2 15.0541 2 9.34066C2 7.87581 2.38193 6.49924 3.05263 5.30315"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M13.4571 9.77392C13.5365 9.49702 13.579 9.20456 13.579 8.90216C13.579 7.15811 12.1651 5.74427 10.4211 5.74427C8.67702 5.74427 7.26318 7.15811 7.26318 8.90216C7.26318 10.6462 8.67702 12.0601 10.4211 12.0601C10.6633 12.0601 10.8991 12.0328 11.1256 11.9812"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
+                  
                 </div>
                 <div className="relative mt-10">
                   <input
@@ -1209,18 +561,13 @@ const Index = (props: any) => {
                     type="button"
                     className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary"
                   >
-                    Send Message
+                    Envoyer 
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </section>
-        {/* calendar */}
-        <div>
-          <h1 className="font-mulish text-2xl">Room Reservation System</h1>
-          <Calendar />
-        </div>
       </div>
     </div>
   );
