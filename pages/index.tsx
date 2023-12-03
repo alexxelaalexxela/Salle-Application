@@ -367,323 +367,13 @@ const Index = (props: any) => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-        <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 block h-9 w-full rotate-180 object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 hidden h-9 w-full object-cover object-top dark:block"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
-          />
-          <div className="overflow-hidden">
-            <div className="container">
-              <div className="grid items-center gap-x-8 gap-y-12 lg:grid-cols-2">
-                <div className="relative mx-auto max-w-[470px] lg:mx-0">
-                  <div className="absolute top-5 -left-10">
-                    <svg
-                      width="214"
-                      height="248"
-                      viewBox="0 0 214 248"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M139.515 246.256C72.6275 255.436 10.3316 228.201 0.91836 161.493C-8.49491 94.7842 56.6327 10.863 123.367 1.30043C190.102 -8.26215 200.969 37.1027 210.459 104.576C219.949 172.05 206.327 237.075 139.515 246.256Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-24 -left-10">
-                    <svg
-                      width="84"
-                      height="84"
-                      viewBox="0 0 84 84"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M81.3928 51.4777C73.6633 73.7393 55.2959 88.8865 33.0255 81.2364C10.7551 73.5863 -5.08673 40.0026 2.4898 17.6644C10.0663 -4.67382 25.9847 -0.848788 48.4847 6.95428C70.9847 14.7573 89.1224 29.216 81.3928 51.4777Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-6 -right-10">
-                    <svg
-                      width="350"
-                      height="304"
-                      viewBox="0 0 350 304"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M349.388 116.01C355.74 211.329 311.122 296.704 215.918 303.36C120.714 310.015 8.44388 209.799 1.47959 114.48C-5.48469 19.2364 59.7959 8.52629 156.148 1.79423C252.577 -4.93783 343.036 20.6899 349.388 116.01Z"
-                        fill="currentColor"
-                        className="text-[#F4F2F0] dark:text-black"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    className="h-[350px] lg:h-auto"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <img
-                      src="/assets/images/restaurent/lifestyle-plan.png"
-                      alt=""
-                      className="relative z-[1] h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-5">
-                  <div className="heading mb-0">
-                    <h4 className="uppercase">
-                      Meal plans made for your{" "}
-                      <span className="text-primary">lifestyle</span>
-                    </h4>
-                  </div>
-                  <p className="text-lg font-medium">
-                    Aenean vulputate eleifend tellus. Aenean leo ligula,
-                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-                    lorem ante, dapibus in, viverra quis.
-                  </p>
-                  <ul className="space-y-5 text-lg font-bold">
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Choose your meals</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>We cook & deliver</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Heat & eat</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <img
-                        src="/assets/images/restaurent/right-arrow.svg"
-                        alt=""
-                        className="rtl:rotate-y-180"
-                      />
-                      <span>Enjoy & Repeat</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="relative overflow-hidden rounded-xl bg-black bg-[url(/assets/images/restaurent/app-bg.png)] bg-cover bg-no-repeat py-10 px-4 text-center dark:bg-white/5 md:p-16 md:ltr:text-left md:rtl:text-right">
-              <img
-                src="/assets/images/restaurent/food-1.png"
-                alt=""
-                className="absolute bottom-0 w-48 opacity-30 ltr:right-0 rtl:left-0 rtl:rotate-y-180 md:opacity-100 lg:w-[420px]"
-              />
-              <div className="heading relative z-[1] mb-0 lg:w-1/2">
-                <h6>Hello Melur!</h6>
-                <h4 className="!text-white">
-                  Melur's First & Best Food Delivery App is here
-                </h4>
-                <Link
-                  href="#"
-                  className="btn mt-6 rounded-md bg-secondary text-white hover:bg-primary"
-                >
-                  get started
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 block h-9 w-full rotate-180 object-cover object-top dark:hidden"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -top-9 hidden h-9 w-full object-cover object-top dark:block"
-          />
-          <img
-            src="/assets/images/restaurent/vector-line-dark.svg"
-            alt=""
-            className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
-          />
-          <Faq type="restaurent" />
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="heading space-y-4 text-center">
-              <h4 className="uppercase">
-                Our <span className="text-primary">articles</span>
-              </h4>
-              <p className="text-lg font-medium">
-                Check out our latest blog posts
-              </p>
-            </div>
-            <div
-              className="group grid-cols-2 overflow-hidden rounded-xl bg-white dark:bg-gray-dark sm:grid"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src="/assets/images/restaurent/food-2.png"
-                  alt=""
-                  className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                />
-              </div>
-              <div className="space-y-4 p-5 font-semibold lg:py-20 lg:px-16">
-                <h6>November 28, 2022</h6>
-                <Link
-                  href="#"
-                  className="text-2xl font-extrabold text-black transition hover:text-secondary dark:text-white dark:hover:text-secondary"
-                >
-                  5 great places to have an authentic italian pizza in LA
-                </Link>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing lectus a
-                  nunc mauris scelerisque sed egestas pharetraol quis pharetra
-                  arcu pharetra blandit scelerisque sed egestas.
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-3.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    We are now introducing pizza delivery via our app
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-4.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    A guide to preparing the five most iconic pizzas of all time
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-              <div
-                className="group overflow-hidden rounded-xl bg-white dark:bg-gray-dark"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div className="overflow-hidden sm:h-64">
-                  <img
-                    src="/assets/images/restaurent/food-5.png"
-                    alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:rotate-6 group-hover:scale-125"
-                  />
-                </div>
-                <div className="space-y-3 p-5 font-semibold">
-                  <h6>November 28, 2022</h6>
-                  <Link
-                    href="#"
-                    className="text-xl font-extrabold text-black transition line-clamp-2 hover:text-secondary dark:text-white dark:hover:text-secondary"
-                  >
-                    Who first invented the pizza? The true story behind
-                  </Link>
-                  <p className="line-clamp-2">
-                    Lorem ipsum dolor amet consectetur adipisicing elit eiusm
-                    tempor incididunt...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-[60px] px-5 dark:bg-gray-dark">
-          <Testimonial
-            className="mx-auto max-w-[1440px] rounded-[32px] py-14 dark:bg-black md:py-20"
-            feedbacks={feedbacks}
-            type="modern-saas"
-          ></Testimonial>
         </section>
 
         <section className="py-14 lg:py-[100px]">
           <div className="container">
             <div className="relative z-10 lg:flex">
               <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
-                <h6>Get In Touch.</h6>
+                <h6>Contactez nous !</h6>
                 <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
                 <div data-aos="fade-right" data-aos-duration="1000">
                   <img
@@ -705,7 +395,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Full Name
+                      Nom/Prenom
                     </label>
                     <svg
                       width="20"
@@ -735,7 +425,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Email Address
+                      Adresse mail
                     </label>
                     <svg
                       width="22"
@@ -767,7 +457,7 @@ const Index = (props: any) => {
                       className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                     />
                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Mobile Number
+                      Numero de téléphone
                     </label>
                     <svg
                       width="22"
@@ -785,37 +475,7 @@ const Index = (props: any) => {
                       />
                     </svg>
                   </div>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="city"
-                      className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-                    />
-                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      City
-                    </label>
-                    <svg
-                      width="20"
-                      height="22"
-                      viewBox="0 0 20 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
-                    >
-                      <path
-                        d="M5.89416 2.31259C7.20149 1.48625 8.75475 1.00732 10.4211 1.00732C15.0719 1.00732 18.8421 4.73828 18.8421 9.34066C18.8421 15.0541 12.1053 21.0073 10.4211 21.0073C8.73684 21.0073 2 15.0541 2 9.34066C2 7.87581 2.38193 6.49924 3.05263 5.30315"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M13.4571 9.77392C13.5365 9.49702 13.579 9.20456 13.579 8.90216C13.579 7.15811 12.1651 5.74427 10.4211 5.74427C8.67702 5.74427 7.26318 7.15811 7.26318 8.90216C7.26318 10.6462 8.67702 12.0601 10.4211 12.0601C10.6633 12.0601 10.8991 12.0328 11.1256 11.9812"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
+                  
                 </div>
                 <div className="relative mt-10">
                   <input
@@ -865,13 +525,39 @@ const Index = (props: any) => {
                     type="button"
                     className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary"
                   >
-                    Send Message
+                    Envoyer 
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </section>
+
+        <section className="relative bg-white py-16 dark:bg-gray-dark md:py-24">
+          <img
+            src="/assets/images/restaurent/vector-line.svg"
+            alt=""
+            className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
+          />
+          <img
+            src="/assets/images/restaurent/vector-line.svg"
+            alt=""
+            className="absolute inset-x-0 -bottom-9 block h-9 w-full rotate-180 object-cover object-top dark:hidden"
+          />
+          <img
+            src="/assets/images/restaurent/vector-line-dark.svg"
+            alt=""
+            className="absolute inset-x-0 -top-9 hidden h-9 w-full object-cover object-top dark:block"
+          />
+          <img
+            src="/assets/images/restaurent/vector-line-dark.svg"
+            alt=""
+            className="absolute inset-x-0 -bottom-9 hidden h-9 w-full rotate-180 object-cover object-top dark:block"
+          />
+          <Faq type="restaurent" />
+        </section>
+
+
       </div>
     </div>
   );
