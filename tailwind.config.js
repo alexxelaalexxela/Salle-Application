@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 const rotateX = plugin(function ({ addUtilities }) {
-    addUtilities({
-        '.rotate-y-180': {
-            transform: 'rotateY(180deg)',
-        },
-    });
+  addUtilities({
+    ".rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+  });
 });
 module.exports = {
   content: [
@@ -35,7 +35,8 @@ module.exports = {
       black: "#08111F",
       primary: "#9db1db",
       secondary: "#6593f9",
-      red : "#FAA0A0",
+      red: "#FAA0A0",
+      blue: "d0efff",
       gray: {
         DEFAULT: "#7780A1",
         dark: "#1C2331",
