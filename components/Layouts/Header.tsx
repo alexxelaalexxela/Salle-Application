@@ -31,7 +31,7 @@ const Header = (props: any) => {
             <div className="container">
                 <div className="flex items-center justify-between py-5 lg:py-0">
                     <Link href="/">
-                        <img src="/assets/images/logo.png" alt="plurk" className="h-10 w-full" />
+                        <img src="/assets/images/logo-lafab.png" alt="plurk" className="h-12" />
                     </Link>
                     <div className="flex items-center">
                         <div onClick={() => toggleMenu()} className={`overlay fixed inset-0 z-[51] bg-black/60 lg:hidden ${showMenu ? '' : 'hidden'}`}></div>
