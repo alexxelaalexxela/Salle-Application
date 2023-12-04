@@ -16,6 +16,8 @@ import ClientSlider from "../components/ClientSlider";
 import Slider from "../components/home/Slider";
 import Calendar from "../components/calendar/calendar";
 import Lightbox from "react-18-image-lightbox";
+import { MdEvent } from "react-icons/md";
+
 const Index = (props: any) => {
   //const [activeTab, setActiveTab] = useState<string>("cozy-room");
   const [isOpen, setIsOpen] = useState<any>(false);
@@ -78,7 +80,7 @@ const Index = (props: any) => {
           <Head>
             <title>Salle Rielle</title>
           </Head>
-          <div className="relative bg-[url(/assets/images/restaurent/salle.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
+          <div className="relative bg-[url(/assets/images/restaurent/workingFromTop.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
             <span className="absolute inset-0 bg-black/80"></span>
 
             <div className="relative mx-auto max-w-[572px] text-center text-white">
@@ -138,17 +140,35 @@ const Index = (props: any) => {
                       <path
                         opacity="0.2"
                         d="M31.5185 87.0065C7.82954 75.8675 -6.70646 53.8285 4.33954 30.1415C15.3855 6.45452 54.3145 -7.12147 78.0735 3.86653C101.833 14.8545 95.7475 31.9105 84.5615 55.8995C73.3755 79.8885 55.2075 98.1455 31.5185 87.0065Z"
-                        fill="#B476E5"
+                        fill="#9db1db"
                       />
                     </svg>
-                    <img
-                      src="/assets/images/restaurent/Book-icon.svg"
-                      alt=""
+                    {/* <svg
                       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                    />
+                      viewBox="0 0 24 24"
+                    ></svg> */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="currentColor"
+                      // class="bi bi-calendar"
+                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                        fill="#6593f9"
+                      ></path>{" "}
+                    </svg>
+                    {/* <img
+                      src="/assets/img/calendar-fill.svg"
+                      alt=""
+                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 "
+                    /> */}
                   </div>
                   <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                    Choissisez votre type
+                    Choisis ton event
                   </h2>
                   <p className="line-clamp-3">
                     Sélectionnez entre les différents types de salle disponibles
@@ -167,7 +187,7 @@ const Index = (props: any) => {
                       <path
                         opacity="0.2"
                         d="M31.5185 87.0065C7.82954 75.8675 -6.70646 53.8285 4.33954 30.1415C15.3855 6.45452 54.3145 -7.12147 78.0735 3.86653C101.833 14.8545 95.7475 31.9105 84.5615 55.8995C73.3755 79.8885 55.2075 98.1455 31.5185 87.0065Z"
-                        fill="#B476E5"
+                        fill="#9db1db"
                       />
                     </svg>
                     <img
@@ -197,7 +217,7 @@ const Index = (props: any) => {
                       <path
                         opacity="0.2"
                         d="M31.5185 87.0065C7.82954 75.8675 -6.70646 53.8285 4.33954 30.1415C15.3855 6.45452 54.3145 -7.12147 78.0735 3.86653C101.833 14.8545 95.7475 31.9105 84.5615 55.8995C73.3755 79.8885 55.2075 98.1455 31.5185 87.0065Z"
-                        fill="#B476E5"
+                        fill="#9db1db"
                       />
                     </svg>
                     <img
@@ -282,9 +302,7 @@ const Index = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        L'heure
-                      </div>
+                      <div></div>
                       <Link
                         href="#"
                         className="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44"
@@ -374,9 +392,7 @@ const Index = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        L'heure
-                      </div>
+                      <div></div>
                       <Link
                         href="#"
                         className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
@@ -466,9 +482,7 @@ const Index = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        La soirée
-                      </div>
+                      <div></div>
                       <Link
                         href="#"
                         className="btn bg-red text-xl text-white group-hover:bg-white group-hover:text-red xl:w-44"
@@ -772,10 +786,6 @@ const Index = (props: any) => {
                 </form>
               </div>
             </div>
-          </section>
-          {/* CALENDAR */}
-          <section>
-            <Calendar />
           </section>
         </div>
       </div>

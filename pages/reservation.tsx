@@ -5,19 +5,17 @@ const Reservation = (props: any) => {
     <div className="pt-[82px] lg:pt-[106px]">
       <div className="flex min-h-[500px] items-center justify-center">
         <div className="p-5 text-center font-semibold">
-
-                    <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
-
-          <div className="card m-4 rounded-xl bg-blue p-4 shadow-xl">
-            <h2 className="mb-3 text-xl font-bold">
-              1. Sélectionnez votre date
-            </h2>
-            <p className="mb-4">
-              Choisissez la date pour laquelle vous souhaitez réserver une
-              chambre.
-            </p>
-            <Calendar />{" "}
-          </div>
+          <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
+            <div className="card m-4 rounded-xl bg-customColor p-4 shadow-xl">
+              <h2 className="mb-3 text-xl font-bold">
+                1. Sélectionnez votre date
+              </h2>
+              <p className="mb-4">
+                Choisissez la date pour laquelle vous souhaitez réserver une
+                chambre.
+              </p>
+              <Calendar />{" "}
+            </div>
           </section>
           <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
             <div className="container">
@@ -83,9 +81,7 @@ const Reservation = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        L'heure
-                      </div>
+                      <div></div>
                       <Link
                         href="#section2"
                         className="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44"
@@ -175,9 +171,7 @@ const Reservation = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        L'heure
-                      </div>
+                      <div></div>
                       <Link
                         href="#section2"
                         className="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
@@ -267,9 +261,7 @@ const Reservation = (props: any) => {
                   </ul>
                   <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                     <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                      <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
-                        La soirée
-                      </div>
+                      <div></div>
                       <Link
                         href="#section2"
                         className="btn bg-red text-xl text-white group-hover:bg-white group-hover:text-red xl:w-44"
