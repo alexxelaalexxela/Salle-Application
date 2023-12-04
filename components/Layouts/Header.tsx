@@ -59,10 +59,10 @@ const Header = (props: any) => {
 
                                 <li>
                                     <Link
-                                        href="/portfolio"
+                                        href="/reservation"
                                         className={router.pathname === '/portfolio' || router.pathname === '/portfolio-detail' ? 'active' : ''}
                                     >
-                                        Portfolio
+                                        Reservez la salle
                                     </Link>
                                 </li>
             <li className="relative hidden items-center before:absolute before:top-1/2 before:h-[30px] before:w-[2px] before:-translate-y-1/2 before:bg-gray/30 ltr:pl-9 ltr:before:-left-[2px] rtl:pr-9 rtl:before:-right-[2px] lg:inline-flex">

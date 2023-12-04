@@ -56,13 +56,13 @@ const Index = (props: any) => {
     };
   return (
     <div>
-      <div className="overflow-hidden bg-[url(/assets/images/restaurent/anniversary.jpeg)] bg-contain bg-center bg-repeat-y">
+      <div className="overflow-hidden bg-white bg-contain bg-center bg-repeat-y">
         <Head>
           <title>
-            Restaurent | Plurk – Tailwind CSS Multipurpose Landing Templates
+           Salle Rielle
           </title>
         </Head>
-        <div className="relative bg-[url(/assets/images/restaurent/salle.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
+        <div className="relative bg-white bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
           <span className="absolute inset-0 bg-black/80"></span>
           
           <div className="relative mx-auto max-w-[572px] text-center text-white">
@@ -567,6 +567,10 @@ const Index = (props: any) => {
               </form>
             </div>
           </div>
+        </section>
+        {/* CALENDAR */}
+        <section>
+          <Calendar/>
         </section>
       </div>
     </div>

@@ -39,6 +39,8 @@ module.exports = {
         DEFAULT: "#7780A1",
         dark: "#1C2331",
       },
+      customRed: "#FFB6B3", // Replace with your desired hex value
+      customGreen: "#BDE7BD", // Replace with your desired hex value
     },
     extend: {
       animation: {
