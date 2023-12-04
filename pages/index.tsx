@@ -105,6 +105,7 @@ const Index = (props: any) => {
               data-aos="fade-up"
               data-aos-duration="1000"
             />
+
             <img
               src="/assets/images/restaurent/vector-line.svg"
               alt=""
@@ -157,7 +158,7 @@ const Index = (props: any) => {
                       viewBox="0 0 16 16"
                     >
                       <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
                         fill="#6593f9"
                       ></path>{" "}
                     </svg>
@@ -190,11 +191,20 @@ const Index = (props: any) => {
                         fill="#9db1db"
                       />
                     </svg>
-                    <img
-                      src="/assets/images/restaurent/heart-icon.svg"
-                      alt=""
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="currentColor"
+                      // class="bi bi-calendar"
                       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                    />
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                        fill="#6593f9"
+                      ></path>{" "}
+                    </svg>
                   </div>
                   <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
                     Choisi un créneau
@@ -220,11 +230,20 @@ const Index = (props: any) => {
                         fill="#9db1db"
                       />
                     </svg>
-                    <img
-                      src="/assets/images/restaurent/fire-icon.svg"
-                      alt=""
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="currentColor"
+                      // class="bi bi-calendar"
                       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                    />
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"
+                        fill="#6593f9"
+                      ></path>{" "}
+                    </svg>
                   </div>
                   <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
                     Réserve en ligne

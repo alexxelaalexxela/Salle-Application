@@ -1,0 +1,21 @@
+.animate-slide-left {
+  animation: slideLeft 0.5s forwards;
+}
+
+.animate-appear-right {
+  opacity: 0;
+  animation: appearRight 0.5s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes appearRight {
+  to {
+    opacity: 1;
+    transform: translateX(50%);
+  }
+}

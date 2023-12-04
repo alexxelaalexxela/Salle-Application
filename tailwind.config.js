@@ -41,9 +41,9 @@ module.exports = {
         DEFAULT: "#7780A1",
         dark: "#1C2331",
       },
-      customRed: "#FFB6B3", 
-      customGreen: "#BDE7BD", 
-      customColor: "d0efff",
+      customRed: "#FFB6B3",
+      customGreen: "#BDE7BD",
+      customLaFab: "#D7D5CA",
     },
     extend: {
       animation: {

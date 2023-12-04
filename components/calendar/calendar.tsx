@@ -56,12 +56,17 @@ const Calendar: React.FC = () => {
     );
   };
 
-  const handleDayClick = (day: CalendarDay) => {
-    if (day.isAvailable && day.date >= today) {
-      setSelectedDay(day);
-      setBookingSlots(day.bookingSlot || []);
-    }
-  };
+  // const handleDayClick = (day: CalendarDay) => {
+  //   if (day.isAvailable && day.date >= today) {
+  //     setSelectedDay(day);
+  //     setBookingSlots(day.bookingSlot || []);
+  //   }
+  // };
+    const handleDayClick = (day: CalendarDay) => {
+      if (day.isAvailable && day.date >= new Date()) {
+        setSelectedDay(day === selectedDay ? null : day); // Toggle selected day
+      }
+    };
 
   const toggleBookingSlot = (slot: BookingSlot) => {
     setBookingSlots((prevSlots) =>
@@ -133,31 +138,10 @@ const Calendar: React.FC = () => {
           ))}
         </div>
         {selectedDay && (
-          <div className="mt-5 rounded-lg bg-white p-4 shadow-lg">
-            <div className="mb-2 font-bold">
-              Select time slots for {selectedDay.date.toDateString()}:
-            </div>
-            {["all day", "morning", "afternoon", "evening"].map((slot) => (
-              <div key={slot} className="mb-2">
-                <input
-                  type="checkbox"
-                  id={slot}
-                  checked={bookingSlots.includes(slot as BookingSlot)}
-                  onChange={() => toggleBookingSlot(slot as BookingSlot)}
-                  className="mr-2"
-                />
-                <label htmlFor={slot}>{slot}</label>
-              </div>
-            ))}
-            <button
-              onClick={confirmBooking}
-              className="hover:bg-green-700 mt-4 rounded bg-customGreen py-2 px-4 font-bold text-white"
-            >
-              Confirmer la réservation
-            </button>
+          <div className="mt-3 text-center text-lg font-semibold">
+            Vous avez sélectionné la date: {selectedDay.date.toDateString()}
           </div>
         )}
-        
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Calendar from "../components/calendar/calendar";
+import SelectionSection from "../components/optionCard/optionCard";
 const Reservation = (props: any) => {
   return (
     <div className="pt-[82px] lg:pt-[106px]">
@@ -35,20 +36,8 @@ const Reservation = (props: any) => {
             </p>
             <Calendar />
           </section>
-          <section className="relative mt-6 rounded-xl bg-customLaFab py-14 px-6 text-center shadow-md">
-            <div className="absolute top-0 left-0 inline-block rounded-tl-lg rounded-br-lg bg-white px-5 py-2">
-              <h3 className="text-lg font-semibold text-customLaFab">
-                Deuxieme étape
-              </h3>
-            </div>
-            <h2 className="mt-8 mb-6 text-4xl font-bold text-white">
-              Choisissez une date pour votre événement
-            </h2>
-            <p className="mb-6 text-white">
-              Trouvez le jour parfait pour célébrer vos moments spéciaux avec
-              nous.
-            </p>
-            <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+            <SelectionSection/>
+            {/* <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
               <div
                 className="group flex flex-col rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
                 data-aos="fade-up"
@@ -298,8 +287,7 @@ const Reservation = (props: any) => {
                   </div>
                 </div>
               </div>
-            </div>{" "}
-          </section>
+            </div>{" "} */}
 
           <section className="relative mt-6 rounded-xl bg-customLaFab py-14 px-6 text-center shadow-md">
             <div className="absolute top-0 left-0 inline-block rounded-tl-lg rounded-br-lg bg-white px-5 py-2">
