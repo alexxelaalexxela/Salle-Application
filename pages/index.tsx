@@ -15,10 +15,20 @@ import ProjectSlider from "../components/ProjectSlider";
 import ClientSlider from "../components/ClientSlider";
 import Slider from "../components/home/Slider";
 import Calendar from "../components/calendar/calendar";
+import Lightbox from "react-18-image-lightbox";
 const Index = (props: any) => {
-        // const [activeTab, setActiveTab] = useState<string>("cozy-room");
+        //const [activeTab, setActiveTab] = useState<string>("cozy-room");
         const [isOpen, setIsOpen] = useState<any>(false);
   const [activeTab, setActiveTab] = useState<string>("all");
+
+  const items = [
+    { src: '/assets/images/hotel-resort/room1.jpg', type: 'delux-room' },
+    { src: '/assets/images/hotel-resort/room2.jpg', type: 'delux-room' },
+    { src: '/assets/images/hotel-resort/room3.jpg', type: 'delux-room' }, 
+    { src: '/assets/images/hotel-resort/fete.jpg', type: 'delux-room' }, 
+    { src: '/assets/images/hotel-resort/meet.jpg', type: 'delux-room' }, 
+
+];
   const isRtl =
     useSelector((state: IRootState) => state.themeConfig.direction) === "rtl"
       ? true
@@ -27,10 +37,18 @@ const Index = (props: any) => {
       {
         id: 1,
         name: "Allan Branch",
-        role: "CEO of Lifted",
+        role: "Salle : Working space",
         thumbnail: "/assets/images/modern-saas/client-1.png",
         message:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          "Excellent espace de travail avec une ambiance calme et productive, équipé de tout le nécessaire pour une journée efficace.",
+      },
+      {
+        id: 1,
+        name: "Jeanne Remy",
+        role: "Salle : anniversaire",
+        thumbnail: "/assets/images/modern-saas/client-2.jpg",
+        message:
+          "Une soirée d'anniversaire inoubliable dans une salle exceptionnelle, avec une atmosphère chaleureuse et des installations parfaites pour célébrer joyeusement!",
       },
     ];
 
@@ -56,26 +74,26 @@ const Index = (props: any) => {
     };
   return (
     <div>
-      <div className="overflow-hidden bg-[url(/assets/images/restaurent/anniversary.jpeg)] bg-contain bg-center bg-repeat-y">
+      <div className="overflow-hidden bg-white bg-contain bg-center bg-repeat-y">
         <Head>
           <title>
             Restaurent | Plurk – Tailwind CSS Multipurpose Landing Templates
           </title>
         </Head>
-        <div className="relative bg-[url(/assets/images/restaurent/salle.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
-          <span className="absolute inset-0 bg-black/80"></span>
+        <div className="relative bg-[url(/assets/images/restaurent/workingFromTop.jpg)] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-64 md:py-64">
+          <span className="absolute inset-0 bg-black/70"></span>
           
           <div className="relative mx-auto max-w-[572px] text-center text-white">
             <h2 className="text-4xl font-black uppercase md:text-6xl md:leading-[75px]">
-              <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+              
                 Réservez votre salle
-              </span>
+             
               
             </h2>
             <p className="mx-auto py-6 text-xl font-semibold xl:w-3/4">
               Choissisez votre type de salle et réservez la en ligne en fonction des disponibilités
             </p>
-            <Link href="#" className="btn text-white">
+            <Link href="/reservation" className="btn text-white">
               réservez maintenant
             </Link>
           </div>
@@ -134,10 +152,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Choose your type 
+                  Choissisez votre type  
                 </h2>
                 <p className="line-clamp-3">
-                  Select between the different type of room availaible
+                  Sélectionnez entre les différents types de salle disponibles
                 </p>
               </div>
               <div className="group space-y-5">
@@ -163,10 +181,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Select a slot
+                  Choisi un créneau 
                 </h2>
                 <p className="line-clamp-3">
-                  Check the availability of the room and select your favorite slot
+                  Vérifiez la disponibilité de la salle et sélectionnez votre créneau préféré
                 </p>
               </div>
               <div className="group space-y-5">
@@ -192,10 +210,10 @@ const Index = (props: any) => {
                   />
                 </div>
                 <h2 className="text-2xl font-bold leading-tight text-black line-clamp-1 dark:text-white md:text-[32px]">
-                  Book it online 
+                  Réserve en ligne 
                 </h2>
                 <p className="line-clamp-3">
-                  Book the room online with your informations
+                  Réserve la salle en ligne en complétant avec tes informations
                 </p>
               </div>
             </div>
@@ -205,11 +223,11 @@ const Index = (props: any) => {
         <section className="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
                 <div className="container">
                     <div className="heading text-center">
-                        
-                        <h4>Different Type of Room </h4>
+
+                        <h4> Différent types de salle  </h4>
                     </div>
                     <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
-                        <div className="flex flex-col group rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div className="flex flex-col group rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="10">
                             <div className="mb-8">
                                 <h3 className="text-[22px] font-black text-black dark:text-white">Working Space</h3>
                             </div>
@@ -259,7 +277,7 @@ const Index = (props: any) => {
                                 
                             </div>
                         </div>
-                        <div className="flex flex-col group rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div className="flex flex-col group rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="10">
                             <div className="relative mb-8">
                                 <h3 className="text-[22px] font-black text-black dark:text-white">Buisness meeting</h3>
                                 
@@ -308,7 +326,7 @@ const Index = (props: any) => {
                                             />
                                         </svg>
                                     </div>
-                                    <p className="ltr:pl-3 rtl:pr-3">Meeting space organisation </p>
+                                    <p className="ltr:pl-3 rtl:pr-3">Espace de meeting adapté </p>
                                 </li>
                                 
                             </ul>
@@ -328,7 +346,7 @@ const Index = (props: any) => {
                                 
                             </div>
                         </div>
-                        <div className="flex flex-col group rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div className="flex flex-col group rounded-3xl border-2 border-red bg-white p-6 px-4 transition hover:bg-red hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6" data-aos="fade-up" data-aos-duration="10">
                             <div className="mb-8">
                                 <h3 className="text-[22px] font-black text-black group-hover:text-white dark:text-white">Fêtes/anniversaires</h3>
                             </div>
@@ -382,10 +400,10 @@ const Index = (props: any) => {
                             </ul>
                             <div className="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
                                 <div className="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
-                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
+                                    <div className="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0">
                                         La soirée 
                                     </div>
-                                    <Link href="#" className="btn bg-black text-xl text-white group-hover:bg-white group-hover:text-black xl:w-44">
+                                    <Link href="#" className="btn bg-red text-xl text-white group-hover:bg-white group-hover:text-red xl:w-44">
                                         350CHF
                                         <small className="text-xs lowercase">/soirée</small>
                                     </Link>
@@ -397,6 +415,108 @@ const Index = (props: any) => {
                 </div>
         </section>
 
+        <section className="bg-gradient-to-t from-white/60 py-12 dark:bg-gradient-to-t dark:from-white/10 lg:py-24">
+                <div className="container">
+                    <div className="heading mb-[30px] text-center ltr:md:text-left rtl:md:text-right">
+                        <h6>Quelques photos des salles </h6>
+                        <h4>Gallerie photo </h4>
+                    </div>
+                    <ul className="filters realestate-filter mt-7 flex flex-row gap-5 overflow-auto whitespace-nowrap pb-2.5 pl-1 sm:gap-[30px]">
+                        <li className={`filter ${activeTab === 'cozy-room' ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                                onClick={() => setActiveTab('cozy-room')}
+                            >
+                                Working space 
+                            </button>
+                        </li>
+                        <li className={`filter ${activeTab === 'delux-room' ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                                onClick={() => setActiveTab('delux-room')}
+                            >
+                                Salle de réunion 
+                            </button>
+                        </li>
+                        <li className={`filter ${activeTab === 'modern-room' ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className="btn rounded-xl bg-gray/[0.08] capitalize text-gray hover:bg-primary"
+                                onClick={() => setActiveTab('modern-room')}
+                            >
+                                Anniversaire
+                            </button>
+                        </li>
+                        
+                    </ul>
+                    <div className="projects mt-8 grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3" data-aos="fade-up" data-aos-duration="1000">
+                        <div
+                            className={`project group relative overflow-hidden rounded-xl ${
+                                activeTab === 'cozy-room' ? 'block' : 'hidden'
+                            }`}
+                        >
+                            <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                            <img src="/assets/images/hotel-resort/room1.jpg" className="z-[1] h-full w-full object-cover" alt="" />
+                            <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                                
+                            </div>
+                        </div>
+                        <div
+                            className={`project group relative overflow-hidden rounded-xl ${
+                                activeTab === 'delux-room' ? 'block' : 'hidden'
+                            }`}
+                        >
+                            <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                            <img src="/assets/images/hotel-resort/meet.jpg" className="z-[1] h-full w-full object-cover" alt="" />
+                            <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                                
+                            </div>
+                        </div>
+                        <div
+                            className={`project group relative overflow-hidden rounded-xl ${
+                                activeTab === 'cozy-room' ? 'block' : 'hidden'
+                            }`}
+                        >
+                            <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                            <img src="/assets/images/hotel-resort/room2.jpg" className="z-[1] h-full w-full object-cover" alt="" />
+                            <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                                
+                            </div>
+                        </div>
+                        <div className={`project group relative overflow-hidden rounded-xl ${activeTab === 'cozy-room' ? 'block' : 'hidden'}`}>
+                            <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                            <img src="/assets/images/hotel-resort/room3.jpg" className="z-[1] h-full w-full object-cover" alt="" />
+                            <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                                
+                            </div>
+                        </div>
+                        <div className={`project group relative overflow-hidden rounded-xl ${activeTab === 'modern-room' ? 'block' : 'hidden'}`}>
+                            <div className="absolute inset-0 duration-200 group-hover:bg-black/50"></div>
+                            <img src="/assets/images/hotel-resort/fete.jpg" className="z-[1] h-full w-full object-cover" alt="" />
+                            <div className="absolute inset-0 m-auto flex scale-0 items-center justify-center text-white transition duration-700 group-hover:scale-100">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={getItems()[photoIndex]}
+                        nextSrc={getItems()[(photoIndex + 1) % getItems().length]}
+                        prevSrc={getItems()[(photoIndex + getItems().length - 1) % getItems().length]}
+                        enableZoom
+                        onImageLoad={() => {
+                            window.dispatchEvent(new Event('resize'));
+                        }}
+                        onCloseRequest={() => setIsOpen(false)}
+                        onMovePrevRequest={() => setPhotoIndex((photoIndex + getItems().length - 1) % getItems().length)}
+                        onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % getItems().length)}
+                    />
+                )}
+            </section>
+            
         <section className="py-[60px] px-5 dark:bg-gray-dark">
           <Testimonial
             className="mx-auto max-w-[1440px] rounded-[32px] py-14 dark:bg-black md:py-20"
@@ -409,8 +529,8 @@ const Index = (props: any) => {
           <div className="container">
             <div className="relative z-10 lg:flex">
               <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
-                <h6>Contactez nous !</h6>
-                <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
+                <h4>Contactez nous !</h4>
+                
                 <div data-aos="fade-right" data-aos-duration="1000">
                   <img
                     src="/assets/images/form-img.png"
@@ -486,31 +606,6 @@ const Index = (props: any) => {
                       />
                     </svg>
                   </div>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="mobile"
-                      className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-                    />
-                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                      Numero de téléphone
-                    </label>
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
-                    >
-                      <path
-                        d="M6.45241 1.40806C5.45292 0.783702 4.14202 0.887138 3.2983 1.73086L1.86856 3.1606C-0.302899 5.33207 1.73747 10.8931 6.42586 15.5815C11.1142 20.2699 16.6753 22.3102 18.8467 20.1388L20.2765 18.709C21.2635 17.722 21.2374 16.0956 20.2182 15.0764L18.0036 12.8619C16.9844 11.8426 15.358 11.8165 14.371 12.8036L14.0639 13.1107C13.531 13.6436 12.6713 13.6957 12.0713 13.2005C11.4925 12.7229 10.9159 12.208 10.3576 11.6497C9.79933 11.0914 9.28441 10.5149 8.80678 9.93607C8.31161 9.33601 8.36374 8.47631 8.89666 7.9434L9.20375 7.63631C9.98187 6.85819 10.1303 5.68271 9.65898 4.72062"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
                   
                 </div>
                 <div className="relative mt-10">
@@ -520,7 +615,7 @@ const Index = (props: any) => {
                     className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                   />
                   <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
-                    Message
+                    Questions
                   </label>
                   <svg
                     width="22"
